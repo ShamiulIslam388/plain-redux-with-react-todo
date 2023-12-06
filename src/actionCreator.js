@@ -1,15 +1,22 @@
-import { ADD_TODO, REMOVE_TODO } from "./constants";
+import { ADD_TODO, EDIT_TODO, REMOVE_TODO } from "./constants";
 
 export const addTodo = (text) => {
   return {
     type: ADD_TODO,
-    payload: text
+    payload: text,
   };
 };
 
 export const removeTodo = (id) => {
   return {
     type: REMOVE_TODO,
-    payload: id
+    payload: id,
+  };
+};
+
+export const editTodo = (text) => {
+  return {
+    type: EDIT_TODO,
+    payload: text,
   };
 };
